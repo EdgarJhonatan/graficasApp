@@ -1,0 +1,26 @@
+<h1>Redes Sociales más usadas</h1>
+<hr>
+
+<div *ngIf="doughnutChartData.length === 0; else divGrafica"  
+     class="alert alert-info">
+    Cargando Data ...
+</div>
+
+
+<div class="col" >
+    <div class="row">
+        <ng-template #divGrafica>
+            <div style="display: block">
+                <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                [colors]="colors">
+                </canvas>
+            </div>
+            <span class="float-end text-primary">
+                Información en billones de usarios
+            </span>
+        </ng-template>
+    </div>
+</div>

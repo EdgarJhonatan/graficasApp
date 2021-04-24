@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "718a815d-ac10-41d8-90b5-c762291c1231"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -17,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies":["chart.js", "lodash"],
             "outputPath": "dist/graficasApp",
             "index": "src/index.html",
             "main": "src/main.ts",
